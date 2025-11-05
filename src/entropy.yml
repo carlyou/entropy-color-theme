@@ -1,0 +1,166 @@
+# Entropy Color Theme Specification
+# Inspired by viridis colormap and natural earth tones
+# Version: 0.1.0
+
+# =============================================================================
+# Deep Night - Background Colors
+# Dark foundation inspired by viridis deep purples and blues
+# =============================================================================
+
+entropy0:
+  hex: "#282a3a"
+  rgb: [40, 42, 58]
+  description: "Darkest background - primary editor background"
+
+entropy1:
+  hex: "#313647"
+  rgb: [49, 54, 71]
+  description: "Dark background - UI panels, sidebars"
+
+entropy2:
+  hex: "#3a3f54"
+  rgb: [58, 63, 84]
+  description: "Elevated background - floating panels, popups"
+
+entropy3:
+  hex: "#435663"
+  rgb: [67, 86, 99]
+  description: "Selection, borders, inactive UI elements"
+
+# =============================================================================
+# Verdant - Green and Teal Tones
+# Primary UI elements and moderate emphasis
+# =============================================================================
+
+entropy4:
+  hex: "#31688e"
+  rgb: [49, 104, 142]
+  description: "Deep teal - functions, methods"
+
+entropy5:
+  hex: "#35b779"
+  rgb: [53, 183, 121]
+  description: "Vibrant teal-green - strings, success states"
+
+entropy6:
+  hex: "#5dbd7a"
+  rgb: [93, 189, 122]
+  description: "Medium green - variables, properties"
+
+entropy7:
+  hex: "#a3b087"
+  rgb: [163, 176, 135]
+  description: "Sage green - comments, muted text"
+
+# =============================================================================
+# Luminance - Bright Text and Highlights
+# Primary foreground colors for text and emphasis
+# =============================================================================
+
+entropy8:
+  hex: "#b8c5a0"
+  rgb: [184, 197, 160]
+  description: "Light sage - secondary text, inactive elements"
+
+entropy9:
+  hex: "#d4d9b8"
+  rgb: [212, 217, 184]
+  description: "Pale green-cream - primary text, normal content"
+
+entropy10:
+  hex: "#e8e5c8"
+  rgb: [232, 229, 200]
+  description: "Warm cream - emphasized text, headings"
+
+entropy11:
+  hex: "#fff8d4"
+  rgb: [255, 248, 212]
+  description: "Brightest cream - highlights, important text"
+
+# =============================================================================
+# Aurora - Accent Colors
+# Syntax highlighting and special semantic colors
+# =============================================================================
+
+entropy12:
+  hex: "#fde724"
+  rgb: [253, 231, 36]
+  description: "Viridis yellow - warnings, special keywords, constants"
+
+entropy13:
+  hex: "#fd971f"
+  rgb: [253, 151, 31]
+  description: "Orange - errors, important notices, numbers"
+
+entropy14:
+  hex: "#dc5fe6"
+  rgb: [220, 95, 230]
+  description: "Purple - keywords, control flow, operators"
+
+entropy15:
+  hex: "#6ec9e0"
+  rgb: [110, 201, 224]
+  description: "Cyan - strings, links, info states"
+
+# =============================================================================
+# Color Palette Groups
+# =============================================================================
+
+groups:
+  deep_night:
+    colors: [entropy0, entropy1, entropy2, entropy3]
+    purpose: "Background colors and dark foundation"
+
+  verdant:
+    colors: [entropy4, entropy5, entropy6, entropy7]
+    purpose: "Green and teal tones for primary UI elements"
+
+  luminance:
+    colors: [entropy8, entropy9, entropy10, entropy11]
+    purpose: "Bright text and highlight colors"
+
+  aurora:
+    colors: [entropy12, entropy13, entropy14, entropy15]
+    purpose: "Accent colors for syntax highlighting"
+
+# =============================================================================
+# Semantic Mappings
+# Guidelines for using colors across different contexts
+# =============================================================================
+
+semantic:
+  background:
+    primary: entropy0
+    secondary: entropy1
+    elevated: entropy2
+
+  foreground:
+    primary: entropy9
+    secondary: entropy8
+    emphasized: entropy10
+    bright: entropy11
+
+  border:
+    default: entropy3
+    active: entropy5
+    inactive: entropy7
+
+  syntax:
+    keyword: entropy14
+    function: entropy4
+    variable: entropy6
+    string: entropy15
+    number: entropy13
+    comment: entropy7
+    constant: entropy12
+    operator: entropy14
+    type: entropy10
+
+  ui:
+    selection: entropy3
+    search: entropy12
+    match: entropy5
+    error: entropy13
+    warning: entropy12
+    info: entropy15
+    success: entropy5
