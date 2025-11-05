@@ -1,0 +1,83 @@
+# Entropy Color Theme for Alacritty
+# Based on viridis colormap and natural earth tones
+#
+# Usage:
+#   Copy this file to your Alacritty configuration directory and import it:
+#
+#   import:
+#     - ~/.config/alacritty/entropy.yml
+#
+# Or copy the colors section directly into your alacritty.yml
+
+colors:
+  # Default colors
+  primary:
+    background: '#282a3a'  # entropy0 - darkest background
+    foreground: '#d4d9b8'  # entropy9 - primary text
+
+  # Cursor colors
+  cursor:
+    text:   '#282a3a'  # entropy0
+    cursor: '#d4d9b8'  # entropy9
+
+  # Vi mode cursor colors
+  vi_mode_cursor:
+    text:   '#282a3a'  # entropy0
+    cursor: '#35b779'  # entropy5 - teal-green
+
+  # Selection colors
+  selection:
+    text:       '#fff8d4'  # entropy11 - brightest
+    background: '#435663'  # entropy3 - selection
+
+  # Search colors
+  search:
+    matches:
+      foreground: '#282a3a'  # entropy0
+      background: '#fde724'  # entropy12 - yellow
+    focused_match:
+      foreground: '#282a3a'  # entropy0
+      background: '#35b779'  # entropy5 - teal-green
+
+  # Line indicator colors
+  line_indicator:
+    foreground: None
+    background: None
+
+  # Footer bar colors
+  footer_bar:
+    foreground: '#282a3a'  # entropy0
+    background: '#a3b087'  # entropy7 - sage green
+
+  # Normal colors
+  normal:
+    black:   '#282a3a'  # entropy0
+    red:     '#fd971f'  # entropy13 - orange
+    green:   '#35b779'  # entropy5 - teal-green
+    yellow:  '#fde724'  # entropy12 - yellow
+    blue:    '#31688e'  # entropy4 - deep teal
+    magenta: '#dc5fe6'  # entropy14 - purple
+    cyan:    '#6ec9e0'  # entropy15 - cyan
+    white:   '#d4d9b8'  # entropy9 - primary text
+
+  # Bright colors
+  bright:
+    black:   '#435663'  # entropy3 - selection/borders
+    red:     '#fd971f'  # entropy13 - orange
+    green:   '#5dbd7a'  # entropy6 - medium green
+    yellow:  '#fde724'  # entropy12 - yellow
+    blue:    '#31688e'  # entropy4 - deep teal
+    magenta: '#dc5fe6'  # entropy14 - purple
+    cyan:    '#6ec9e0'  # entropy15 - cyan
+    white:   '#fff8d4'  # entropy11 - brightest
+
+  # Dim colors (optional - used with draw_bold_text_with_bright_colors: false)
+  dim:
+    black:   '#282a3a'  # entropy0
+    red:     '#fd971f'  # entropy13
+    green:   '#35b779'  # entropy5
+    yellow:  '#fde724'  # entropy12
+    blue:    '#31688e'  # entropy4
+    magenta: '#dc5fe6'  # entropy14
+    cyan:    '#6ec9e0'  # entropy15
+    white:   '#b8c5a0'  # entropy8 - light sage

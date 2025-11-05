@@ -31,18 +31,42 @@ entropy-color-theme/
 └── README.md
 ```
 
-## Ports
+## Available Ports
 
-- [x] Neovim
-- [ ] WezTerm
-- [ ] VS Code
-- [ ] Alacritty
-- [ ] Kitty
-- [ ] Tmux
+- ✅ **[Neovim](ports/neovim/)** - Full support for Treesitter, LSP, and popular plugins
+- ✅ **[WezTerm](ports/wezterm/)** - Complete terminal color scheme with tab bar styling
+- ✅ **[VS Code](ports/vscode/)** - Comprehensive editor and UI theming
+- ✅ **[Alacritty](ports/alacritty/)** - Terminal color scheme with YAML/TOML support
+- 🔄 Kitty - Coming soon
+- 🔄 Tmux - Coming soon
+- 🔄 Zellij - Coming soon
 
-## Installation
+## Quick Start
 
-See individual port directories for installation instructions.
+Each port has its own installation guide. Here's a quick overview:
+
+### Neovim
+```lua
+require("entropy").setup()
+vim.cmd([[colorscheme entropy]])
+```
+
+### WezTerm
+```lua
+local entropy = require('entropy')
+config.colors = entropy.colors()
+```
+
+### VS Code
+Copy to `~/.vscode/extensions/entropy-theme-0.1.0` and select "Entropy" from the theme picker.
+
+### Alacritty
+```yaml
+import:
+  - ~/.config/alacritty/entropy.yml
+```
+
+See individual port directories for detailed installation instructions and customization options.
 
 ## License
 
