@@ -19,11 +19,68 @@ A modern color theme for Neovim inspired by the viridis colormap and natural ear
 
 ## Installation
 
-### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
+### Using [LazyVim](https://www.lazyvim.org/)
+
+#### Quick Installation (Recommended)
+
+From the neovim port directory, run:
+
+```bash
+cd ports/neovim
+./install-lazyvim.sh
+```
+
+This will automatically create the plugin configuration file in the correct location.
+
+#### Manual Installation
+
+Create a new file `~/.config/nvim/lua/plugins/entropy.lua`:
+
+```lua
+return {
+  -- Add the Entropy theme
+  {
+    dir = vim.fn.expand("~/entropy-color-theme/ports/neovim"),
+    name = "entropy",
+    lazy = false,
+    priority = 1000,
+  },
+
+  -- Configure LazyVim to use Entropy
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "entropy",
+    },
+  },
+}
+```
+
+**Alternative**: If you cloned the repo to a different location:
+
+```lua
+return {
+  {
+    -- Update this path to where you cloned the repo
+    dir = "/path/to/entropy-color-theme/ports/neovim",
+    name = "entropy",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "entropy",
+    },
+  },
+}
+```
+
+### Using [lazy.nvim](https://github.com/folke/lazy.nvim) (without LazyVim)
 
 ```lua
 {
-  dir = "/home/user/entropy-color-theme/ports/neovim",
+  dir = vim.fn.expand("~/entropy-color-theme/ports/neovim"),
   name = "entropy",
   lazy = false,
   priority = 1000,
@@ -109,6 +166,58 @@ print(colors.bg.primary)     -- Background color
 print(colors.fg.primary)     -- Foreground color
 print(colors.syntax.keyword) -- Keyword color
 ```
+
+## Troubleshooting
+
+### Theme not loading in LazyVim
+
+1. **Check the plugin file exists**:
+   ```bash
+   ls ~/.config/nvim/lua/plugins/entropy.lua
+   ```
+
+2. **Verify the path is correct**:
+   - Open the plugin file and make sure the `dir` path points to the correct location
+   - The path should be absolute or use `vim.fn.expand()`
+
+3. **Try syncing plugins**:
+   - Open Neovim
+   - Run `:Lazy sync`
+   - Restart Neovim
+
+4. **Manually set the colorscheme**:
+   ```vim
+   :colorscheme entropy
+   ```
+
+5. **Check for errors**:
+   ```vim
+   :messages
+   :Lazy log
+   ```
+
+### Colors look wrong
+
+- Ensure `termguicolors` is enabled:
+  ```lua
+  vim.opt.termguicolors = true
+  ```
+
+- Check your terminal supports 24-bit true color
+- For tmux, ensure your config has:
+  ```
+  set -g default-terminal "tmux-256color"
+  set -ag terminal-overrides ",xterm-256color:RGB"
+  ```
+
+### Plugin highlights not working
+
+Some plugins may need to be reloaded after changing themes. Try:
+```vim
+:Lazy reload entropy
+```
+
+Or restart Neovim.
 
 ## Screenshots
 
