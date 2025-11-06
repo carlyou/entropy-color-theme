@@ -43,13 +43,25 @@ entropy-color-theme/
 
 ## Quick Start
 
-Each port has its own installation guide. Here's a quick overview:
+### Neovim (LazyVim)
 
-### Neovim
+Create `~/.config/nvim/lua/plugins/entropy.lua`:
+
 ```lua
-require("entropy").setup()
-vim.cmd([[colorscheme entropy]])
+return {
+  {
+    "carlyou/entropy-color-theme",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.opt.rtp:append(vim.fn.stdpath("data") .. "/lazy/entropy-color-theme/ports/neovim")
+      vim.cmd.colorscheme("entropy")
+    end,
+  },
+}
 ```
+
+Restart Neovim - done!
 
 ### WezTerm
 ```lua

@@ -21,24 +21,33 @@ A modern color theme for Neovim inspired by the viridis colormap and natural ear
 
 ### Using [LazyVim](https://www.lazyvim.org/)
 
-#### Quick Installation (Recommended)
+#### 🚀 Easy Install from GitHub (Recommended)
 
-From the neovim port directory, run:
-
-```bash
-cd ports/neovim
-./install-lazyvim.sh
-```
-
-This will automatically create the plugin configuration file in the correct location.
-
-#### Manual Installation
-
-Create a new file `~/.config/nvim/lua/plugins/entropy.lua`:
+Create `~/.config/nvim/lua/plugins/entropy.lua`:
 
 ```lua
 return {
-  -- Add the Entropy theme
+  {
+    "carlyou/entropy-color-theme",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Add the neovim port to runtimepath
+      vim.opt.rtp:append(vim.fn.stdpath("data") .. "/lazy/entropy-color-theme/ports/neovim")
+      vim.cmd.colorscheme("entropy")
+    end,
+  },
+}
+```
+
+**That's it!** Restart Neovim and the theme will be automatically downloaded and activated.
+
+#### Local Installation
+
+If you've cloned the repo locally, create `~/.config/nvim/lua/plugins/entropy.lua`:
+
+```lua
+return {
   {
     dir = vim.fn.expand("~/entropy-color-theme/ports/neovim"),
     name = "entropy",
@@ -46,27 +55,6 @@ return {
     priority = 1000,
   },
 
-  -- Configure LazyVim to use Entropy
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "entropy",
-    },
-  },
-}
-```
-
-**Alternative**: If you cloned the repo to a different location:
-
-```lua
-return {
-  {
-    -- Update this path to where you cloned the repo
-    dir = "/path/to/entropy-color-theme/ports/neovim",
-    name = "entropy",
-    lazy = false,
-    priority = 1000,
-  },
   {
     "LazyVim/LazyVim",
     opts = {
