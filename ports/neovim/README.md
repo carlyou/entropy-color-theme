@@ -19,11 +19,7 @@ A modern color theme for Neovim inspired by the viridis colormap and natural ear
 
 ## Installation
 
-### Using [LazyVim](https://www.lazyvim.org/)
-
-#### 🚀 Easy Install from GitHub (Recommended)
-
-**Option 1:** Plugin only (set colorscheme in LazyVim opts)
+### LazyVim (Recommended)
 
 Create `~/.config/nvim/lua/plugins/entropy.lua`:
 
@@ -50,39 +46,23 @@ return {
 }
 ```
 
-**Option 2:** All-in-one (sets colorscheme directly)
+**That's it!** Restart Neovim, run `:Lazy sync`, and the theme will be automatically downloaded and activated.
 
-```lua
-return {
-  {
-    "carlyou/entropy-color-theme",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.opt.rtp:append(vim.fn.stdpath("data") .. "/lazy/entropy-color-theme/ports/neovim")
-      vim.cmd.colorscheme("entropy")
-    end,
-  },
-}
+**Note:** When testing from a development branch, add `branch = "branch-name"` to the plugin spec.
+
+### Manual Installation
+
+Run the install script from the repo:
+
+```bash
+cd /path/to/entropy-color-theme
+./install-neovim.sh
 ```
 
-**That's it!** Restart Neovim and the theme will be automatically downloaded and activated.
-
-**Note:** If testing from a branch, add `branch = "branch-name"` to the plugin spec. After reinstalling in Lazy (`:Lazy sync`), restart Neovim.
-
-#### Local Installation
-
-If you've cloned the repo locally, create `~/.config/nvim/lua/plugins/entropy.lua`:
+Then set the colorscheme in your LazyVim config:
 
 ```lua
 return {
-  {
-    dir = vim.fn.expand("~/entropy-color-theme/ports/neovim"),
-    name = "entropy",
-    lazy = false,
-    priority = 1000,
-  },
-
   {
     "LazyVim/LazyVim",
     opts = {
@@ -91,55 +71,6 @@ return {
   },
 }
 ```
-
-### Using [lazy.nvim](https://github.com/folke/lazy.nvim) (without LazyVim)
-
-```lua
-{
-  dir = vim.fn.expand("~/entropy-color-theme/ports/neovim"),
-  name = "entropy",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("entropy").setup()
-    vim.cmd([[colorscheme entropy]])
-  end,
-}
-```
-
-### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
-
-```lua
-use {
-  "/home/user/entropy-color-theme/ports/neovim",
-  as = "entropy",
-  config = function()
-    require("entropy").setup()
-    vim.cmd([[colorscheme entropy]])
-  end
-}
-```
-
-### Manual Installation
-
-1. Copy the `entropy` directory to your Neovim configuration:
-   ```bash
-   # Unix/Linux/macOS
-   cp -r ports/neovim/lua/entropy ~/.config/nvim/lua/
-   cp ports/neovim/colors/entropy.lua ~/.config/nvim/colors/
-   ```
-
-2. Add to your `init.lua`:
-   ```lua
-   require("entropy").setup()
-   vim.cmd([[colorscheme entropy]])
-   ```
-
-   Or in `init.vim`:
-   ```vim
-   lua require("entropy").setup()
-   colorscheme entropy
-   ```
 
 ## Color Palette
 
