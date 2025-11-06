@@ -10,17 +10,16 @@ Create `~/.config/nvim/lua/plugins/entropy.lua`:
 return {
   {
     "carlyou/entropy-color-theme",
-    name = "entropy",
     lazy = false,
     priority = 1000,
     config = function()
-      -- Add the neovim port to runtimepath
-      vim.opt.rtp:append(vim.fn.stdpath("data") .. "/lazy/entropy-color-theme/ports/neovim")
-      require("entropy").setup()
-      vim.cmd([[colorscheme entropy]])
+      local data_path = vim.fn.stdpath("data")
+      local entropy_path = data_path .. "/lazy/entropy-color-theme/ports/neovim"
+      vim.opt.rtp:append(entropy_path)
     end,
   },
 
+  -- Set as default colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
@@ -30,11 +29,11 @@ return {
 }
 ```
 
-That's it! Restart Neovim and the theme will be automatically downloaded and activated.
+That's it! Restart Neovim, run `:Lazy sync`, and the theme will be automatically downloaded and activated.
 
-### Method 2: One-Line Install
+### Method 2: All-in-One
 
-Or use this simplified version:
+Or use this version that sets the colorscheme directly:
 
 ```lua
 return {

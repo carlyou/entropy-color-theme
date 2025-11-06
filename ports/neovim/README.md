@@ -23,6 +23,8 @@ A modern color theme for Neovim inspired by the viridis colormap and natural ear
 
 #### 🚀 Easy Install from GitHub (Recommended)
 
+**Option 1:** Plugin only (set colorscheme in LazyVim opts)
+
 Create `~/.config/nvim/lua/plugins/entropy.lua`:
 
 ```lua
@@ -32,7 +34,31 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- Add the neovim port to runtimepath
+      local data_path = vim.fn.stdpath("data")
+      local entropy_path = data_path .. "/lazy/entropy-color-theme/ports/neovim"
+      vim.opt.rtp:append(entropy_path)
+    end,
+  },
+
+  -- Set as default colorscheme
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "entropy",
+    },
+  },
+}
+```
+
+**Option 2:** All-in-one (sets colorscheme directly)
+
+```lua
+return {
+  {
+    "carlyou/entropy-color-theme",
+    lazy = false,
+    priority = 1000,
+    config = function()
       vim.opt.rtp:append(vim.fn.stdpath("data") .. "/lazy/entropy-color-theme/ports/neovim")
       vim.cmd.colorscheme("entropy")
     end,
@@ -41,6 +67,8 @@ return {
 ```
 
 **That's it!** Restart Neovim and the theme will be automatically downloaded and activated.
+
+**Note:** If testing from a branch, add `branch = "branch-name"` to the plugin spec. After reinstalling in Lazy (`:Lazy sync`), restart Neovim.
 
 #### Local Installation
 
