@@ -4,15 +4,15 @@
 local M = {}
 
 -- Deep Night - Background colors
-M.entropy0 = "#282a3a"  -- Darkest background
-M.entropy1 = "#313647"  -- Dark background
-M.entropy2 = "#3a3f54"  -- Elevated background
-M.entropy3 = "#435663"  -- Selection, borders
+M.entropy0 = "#1a1c26"  -- Darkest background
+M.entropy1 = "#21232e"  -- Dark background
+M.entropy2 = "#2a2d3a"  -- Elevated background
+M.entropy3 = "#363d48"  -- Selection, borders
 
 -- Verdant - Green and teal tones
-M.entropy4 = "#31688e"  -- Deep teal
-M.entropy5 = "#35b779"  -- Vibrant teal-green
-M.entropy6 = "#5dbd7a"  -- Medium green
+M.entropy4 = "#4a7b9d"  -- Deep teal
+M.entropy5 = "#4a9d6f"  -- Muted teal-green
+M.entropy6 = "#6ba578"  -- Medium green
 M.entropy7 = "#a3b087"  -- Sage green
 
 -- Luminance - Bright text and highlights
@@ -22,10 +22,10 @@ M.entropy10 = "#e8e5c8" -- Warm cream
 M.entropy11 = "#fff8d4" -- Brightest cream
 
 -- Aurora - Accent colors
-M.entropy12 = "#fde724" -- Viridis yellow
-M.entropy13 = "#fd971f" -- Orange
-M.entropy14 = "#dc5fe6" -- Purple
-M.entropy15 = "#6ec9e0" -- Cyan
+M.entropy12 = "#d4c254" -- Muted yellow
+M.entropy13 = "#d89668" -- Muted orange
+M.entropy14 = "#b57ec0" -- Muted purple
+M.entropy15 = "#75b5c7" -- Muted cyan
 
 -- Semantic color mappings for easier use
 M.bg = {

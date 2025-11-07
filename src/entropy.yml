@@ -8,23 +8,23 @@
 # =============================================================================
 
 entropy0:
-  hex: "#282a3a"
-  rgb: [40, 42, 58]
+  hex: "#1a1c26"
+  rgb: [26, 28, 38]
   description: "Darkest background - primary editor background"
 
 entropy1:
-  hex: "#313647"
-  rgb: [49, 54, 71]
+  hex: "#21232e"
+  rgb: [33, 35, 46]
   description: "Dark background - UI panels, sidebars"
 
 entropy2:
-  hex: "#3a3f54"
-  rgb: [58, 63, 84]
+  hex: "#2a2d3a"
+  rgb: [42, 45, 58]
   description: "Elevated background - floating panels, popups"
 
 entropy3:
-  hex: "#435663"
-  rgb: [67, 86, 99]
+  hex: "#363d48"
+  rgb: [54, 61, 72]
   description: "Selection, borders, inactive UI elements"
 
 # =============================================================================
@@ -33,18 +33,18 @@ entropy3:
 # =============================================================================
 
 entropy4:
-  hex: "#31688e"
-  rgb: [49, 104, 142]
+  hex: "#4a7b9d"
+  rgb: [74, 123, 157]
   description: "Deep teal - functions, methods"
 
 entropy5:
-  hex: "#35b779"
-  rgb: [53, 183, 121]
-  description: "Vibrant teal-green - strings, success states"
+  hex: "#4a9d6f"
+  rgb: [74, 157, 111]
+  description: "Muted teal-green - strings, success states"
 
 entropy6:
-  hex: "#5dbd7a"
-  rgb: [93, 189, 122]
+  hex: "#6ba578"
+  rgb: [107, 165, 120]
   description: "Medium green - variables, properties"
 
 entropy7:
@@ -83,24 +83,24 @@ entropy11:
 # =============================================================================
 
 entropy12:
-  hex: "#fde724"
-  rgb: [253, 231, 36]
-  description: "Viridis yellow - warnings, special keywords, constants"
+  hex: "#d4c254"
+  rgb: [212, 194, 84]
+  description: "Muted yellow - warnings, special keywords, constants"
 
 entropy13:
-  hex: "#fd971f"
-  rgb: [253, 151, 31]
-  description: "Orange - errors, important notices, numbers"
+  hex: "#d89668"
+  rgb: [216, 150, 104]
+  description: "Muted orange - errors, important notices, numbers"
 
 entropy14:
-  hex: "#dc5fe6"
-  rgb: [220, 95, 230]
-  description: "Purple - keywords, control flow, operators"
+  hex: "#b57ec0"
+  rgb: [181, 126, 192]
+  description: "Muted purple - keywords, control flow, operators"
 
 entropy15:
-  hex: "#6ec9e0"
-  rgb: [110, 201, 224]
-  description: "Cyan - strings, links, info states"
+  hex: "#75b5c7"
+  rgb: [117, 181, 199]
+  description: "Muted cyan - strings, links, info states"
 
 # =============================================================================
 # Color Palette Groups
