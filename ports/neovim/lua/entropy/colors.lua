@@ -4,10 +4,10 @@
 local M = {}
 
 -- Deep Night - Background colors
-M.entropy0 = "#1a1c26"  -- Darkest background
-M.entropy1 = "#21232e"  -- Dark background
-M.entropy2 = "#2a2d3a"  -- Elevated background
-M.entropy3 = "#363d48"  -- Selection, borders
+M.entropy0 = "#0d0e14"  -- Darkest background
+M.entropy1 = "#15171f"  -- Dark background
+M.entropy2 = "#1d2028"  -- Elevated background
+M.entropy3 = "#2a2f3a"  -- Selection, borders
 
 -- Verdant - Green and teal tones
 M.entropy4 = "#4a7b9d"  -- Deep teal
@@ -17,9 +17,9 @@ M.entropy7 = "#a3b087"  -- Sage green
 
 -- Luminance - Bright text and highlights
 M.entropy8 = "#b8c5a0"  -- Light sage
-M.entropy9 = "#d4d9b8"  -- Pale green-cream
-M.entropy10 = "#e8e5c8" -- Warm cream
-M.entropy11 = "#fff8d4" -- Brightest cream
+M.entropy9 = "#dfe4c2"  -- Pale green-cream
+M.entropy10 = "#f0edd8" -- Warm cream
+M.entropy11 = "#fffef5" -- Brightest cream
 
 -- Aurora - Accent colors
 M.entropy12 = "#d4c254" -- Muted yellow

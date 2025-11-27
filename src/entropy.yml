@@ -8,23 +8,23 @@
 # =============================================================================
 
 entropy0:
-  hex: "#1a1c26"
-  rgb: [26, 28, 38]
+  hex: "#0d0e14"
+  rgb: [13, 14, 20]
   description: "Darkest background - primary editor background"
 
 entropy1:
-  hex: "#21232e"
-  rgb: [33, 35, 46]
+  hex: "#15171f"
+  rgb: [21, 23, 31]
   description: "Dark background - UI panels, sidebars"
 
 entropy2:
-  hex: "#2a2d3a"
-  rgb: [42, 45, 58]
+  hex: "#1d2028"
+  rgb: [29, 32, 40]
   description: "Elevated background - floating panels, popups"
 
 entropy3:
-  hex: "#363d48"
-  rgb: [54, 61, 72]
+  hex: "#2a2f3a"
+  rgb: [42, 47, 58]
   description: "Selection, borders, inactive UI elements"
 
 # =============================================================================
@@ -63,18 +63,18 @@ entropy8:
   description: "Light sage - secondary text, inactive elements"
 
 entropy9:
-  hex: "#d4d9b8"
-  rgb: [212, 217, 184]
+  hex: "#dfe4c2"
+  rgb: [223, 228, 194]
   description: "Pale green-cream - primary text, normal content"
 
 entropy10:
-  hex: "#e8e5c8"
-  rgb: [232, 229, 200]
+  hex: "#f0edd8"
+  rgb: [240, 237, 216]
   description: "Warm cream - emphasized text, headings"
 
 entropy11:
-  hex: "#fff8d4"
-  rgb: [255, 248, 212]
+  hex: "#fffef5"
+  rgb: [255, 254, 245]
   description: "Brightest cream - highlights, important text"
 
 # =============================================================================
